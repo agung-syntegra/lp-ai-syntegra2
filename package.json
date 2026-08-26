@@ -1,0 +1,12 @@
+{
+  "name": "lp-ai-syntegra2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page Syntegra AI — Ask. Do. Deliver.",
+  "scripts": {
+    "start": "serve . -l tcp://0.0.0.0:${PORT:-3000}"
+  },
+  "dependencies": {
+    "serve": "14.2.4"
+  }
+}

@@ -1,2 +1,6 @@
 # Backup lokal, tidak perlu masuk repo
 *.bak
+
+# Dependencies
+node_modules/
+npm-debug.log*
