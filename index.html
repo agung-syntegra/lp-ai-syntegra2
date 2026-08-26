@@ -514,6 +514,9 @@ h2 .hl,.h2 .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
 .day-close{margin-top:34px;text-align:center}
 .day-close .big{font-size:clamp(21px,3.4vw,30px);font-weight:800;color:#fff}
 .day-close .brandline{margin-top:12px;justify-content:center}
+/* Line-break yang hanya aktif di mobile (≤759px) */
+.br-m{display:none}
+@media (max-width:759px){ .br-m{display:inline} }
 /* CTA primary di section latar gelap (.sec-dark) — mis. "A Day" & Final CTA:
    tombol PUTIH agar kontras dengan background biru gelap (gradient navy hampir
    menyatu dengan latar). Tombol sekunder tetap ghost/light. */
@@ -1633,7 +1636,7 @@ fbq('init','PIXEL_ID');
     </ol>
 
     <div class="day-close">
-      <p class="big">Enam Pekerjaan. Satu Platform AI.</p>
+      <p class="big">Enam Pekerjaan. <br class="br-m" />Satu Platform AI.</p>
       <p class="brandline"><span>Ask.</span><span>Do.</span><span>Deliver.</span></p>
       <div class="sell reveal" style="max-width:640px;margin:26px auto 0;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.15)">
         <div><h3>Pekerjaan Harian Bisa Terasa Lebih Ringkas.</h3></div>
