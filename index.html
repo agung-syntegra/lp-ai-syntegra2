@@ -964,14 +964,15 @@ h2 .hl,.h2 .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
 
 
 /* =========================================================
-   AURORA GLOW — HANYA pada section latar PUTIH (.sec-white):
-   How it works, Positioning, Pricing. Intensitas dinaikkan
-   (lebih pekat) agar glow lebih terasa di atas latar putih.
+   AURORA GLOW — pada section latar terang: .sec-white (How it works,
+   Positioning, Pricing), Hero, serta feature section polos .sec
+   (Daily, Documents, Creative). Section .sec-soft & .sec-dark
+   sengaja dikecualikan. Intensitas pekat agar glow terasa.
    Dipasang di ::after (z-index:-1 dalam stacking-context isolation)
    → konten tetap di atas glow; blob di-clip oleh overflow:hidden.
    ========================================================= */
-.sec-white{isolation:isolate;overflow:hidden}
-.sec-white::after{
+.sec-white,.hero,.sec:not(.sec-soft):not(.sec-white):not(.sec-dark){isolation:isolate;overflow:hidden}
+.sec-white::after,.hero::after,.sec:not(.sec-soft):not(.sec-white):not(.sec-dark)::after{
   content:"";position:absolute;inset:-25% -12%;z-index:-1;pointer-events:none;
   filter:blur(38px) saturate(140%);
   will-change:transform,opacity;
@@ -988,7 +989,7 @@ h2 .hl,.h2 .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
   100%{transform:translate3d(-2%,2%,0) scale(1.05)}
 }
 @media (prefers-reduced-motion: reduce){
-  .sec-white::after{animation:none}
+  .sec-white::after,.hero::after,.sec:not(.sec-soft):not(.sec-white):not(.sec-dark)::after{animation:none}
 }
 </style>
 
