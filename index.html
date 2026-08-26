@@ -394,6 +394,14 @@ h2 .hl,.h2 .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
 @media(max-width:820px){.pains{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.pains{grid-template-columns:1fr}}
 
+/* ===== Section fitur GABUNG: header tengah + dua kolom fitur ===== */
+.fg-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,42px);margin-top:clamp(26px,3.4vw,44px);align-items:start}
+.fg-cell{display:flex;flex-direction:column}
+.fg-cell .ph.ph-duo{aspect-ratio:3/2;width:100%;margin:0 0 16px}
+.fg-cell .feat-label.sm{font-size:.68rem;margin:0 0 8px}
+.fg-cell .fg-body{margin:0 0 16px}
+@media (max-width:759px){ .fg-duo{grid-template-columns:1fr;gap:clamp(30px,7vw,42px)} }
+
 /* Rapatkan jarak atas (di atas banner) & bawah section #masalah. Default .sec
    (≈120px di desktop) terlalu lebar → latar biru muda-nya mengintip di layar awal. */
 #masalah{padding-top:clamp(20px,2.8vw,40px);padding-bottom:clamp(26px,3.6vw,52px)}
@@ -1266,174 +1274,115 @@ fbq('init','PIXEL_ID');
 </section>
 
 <!-- =========================================================
-     §03 — FEATURE GROUP 1: DAILY COMMAND CENTER
+     §03 — FEATURE GROUP (GABUNG): HARIAN + MEETING
      ========================================================= -->
 <section class="sec" id="pekerjaan">
-  <div class="container fg-inner fg-reverse">
-    <div class="fg-copy">
-      <p class="feat-label">Email • Calendar • Notes • Reminder</p>
-      <h2>Inbox Penuh. Jadwal Berubah. To-do Menumpuk. <span class="hl">Syntegra yang Urus.</span></h2>
-      <p class="fg-body">
-        Buka email untuk satu info, 20 menit kemudian masih baca thread lain. Buka kalender, meeting bentrok.
-        Catat sesuatu, lalu lupa. Masalahnya bukan aplikasinya — <b>Anda tetap jadi operator untuk semuanya</b>.
-      </p>
+  <div class="container">
+    <div class="sec-head center">
+      <p class="feat-label">Email • Calendar • Notes • Reminder • Meeting Recorder • AI Summary • Mindmap</p>
+      <h2>Urus Inbox, Jadwal &amp; Meeting — <span class="hl">Tanpa Jadi Operatornya.</span></h2>
     </div>
 
-    <div class="fg-media">
-      <!-- §15: Daily Command · 1080×1200 (9:10) — copy terpanjang -->
-      <figure class="ph ph-tall reveal">
-        <img src="img/syntegra-daily-command.webp" loading="lazy" decoding="async"
-             alt="Seorang wanita profesional menikmati pagi yang tenang di meja kerja yang rapi sambil memegang secangkir kopi."
-             onerror="this.remove()" />
-        <div class="ph-body">
-          <span class="ph-badge">🖼️ Saran gambar</span>
-          <b class="ph-h">FOTO — Pagi yang tertata</b>
-          <p class="ph-d">Foto aktivitas — seorang <b>wanita</b> profesional memulai pagi dengan tenang di meja kerja yang rapi: memegang secangkir kopi, ekspresi fokus dan rileks. Cahaya alami hangat, kontras dengan kekacauan di section Problem. Tanpa teks, tulisan, atau layar terbaca dalam foto. Framing 1:1 — subjek di tengah.</p>
-          <code class="ph-f">syntegra-daily-command.webp · 1200×1200 (1:1)</code>
+    <div class="fg-duo">
+      <!-- DAILY -->
+      <article class="fg-cell reveal">
+        <figure class="ph ph-duo">
+          <img src="img/syntegra-daily-command.webp" loading="lazy" decoding="async"
+               alt="Seorang profesional menikmati kopi pagi sambil bekerja tenang di depan laptop."
+               onerror="this.remove()" />
+        </figure>
+        <p class="feat-label sm">Inbox • Jadwal • To-do • Reminder</p>
+        <p class="fg-body">Buka email untuk satu info, 20 menit kemudian masih baca thread lain. Kalender bentrok, catatan lupa. Masalahnya bukan aplikasinya — <b>Anda tetap jadi operator untuk semuanya</b>.</p>
+        <div class="adl">
+          <div class="adl-row is-ask"><span class="adl-tag">Ask</span><p>“Ringkas email penting hari ini, buat follow-up klien, pindahkan meeting jam 2 ke jam 3, ingatkan 30 menit sebelumnya.”</p></div>
+          <div class="adl-row"><span class="adl-tag">Do</span><p>Dieksekusi lewat Gmail, Calendar, Notes, To-do &amp; Reminder.</p></div>
+          <div class="adl-row"><span class="adl-tag">Deliver</span><p>Semua tertata rapi, tanpa pindah aplikasi.</p></div>
+          <p class="adl-result">Lebih sedikit mengurus aplikasi. Lebih banyak mengurus bisnis.</p>
         </div>
-      </figure>
-    </div>
+      </article>
 
-    <!-- Ask/Do/Deliver: 3 kotak horizontal, full-width di bawah baris atas. -->
-    <div class="adl">
-      <div class="adl-row is-ask">
-        <span class="adl-tag">Ask</span>
-        <p>“Ringkas email penting saya hari ini. Buatkan follow-up untuk klien yang belum membalas, pindahkan meeting jam 2 ke jam 3, lalu ingatkan saya 30 menit sebelumnya.”</p>
-      </div>
-      <div class="adl-row">
-        <span class="adl-tag">Do</span>
-        <p>Dieksekusi lewat Gmail, Calendar, Notes, To-do &amp; Reminder.</p>
-      </div>
-      <div class="adl-row">
-        <span class="adl-tag">Deliver</span>
-        <p>Semua tertata rapi, tanpa pindah aplikasi.</p>
-      </div>
-      <p class="adl-result">Lebih sedikit mengurus aplikasi. Lebih banyak mengurus bisnis.</p>
+      <!-- MEETING -->
+      <article class="fg-cell reveal">
+        <figure class="ph ph-duo">
+          <img src="img/syntegra-meeting.webp" loading="lazy" decoding="async"
+               alt="Seorang wanita memimpin diskusi santai dengan dua rekan kerja di ruang meeting yang terang."
+               onerror="this.remove()" />
+        </figure>
+        <p class="feat-label sm">Meeting Recorder • AI Summary • Mindmap</p>
+        <p class="fg-body">Meeting selesai, semua merasa sepakat. Sejam kemudian: siapa handle proposal, deadline kapan, versi mana yang oke? <b>Rekaman 57 menit tak otomatis jadi keputusan.</b></p>
+        <div class="adl">
+          <div class="adl-row is-ask"><span class="adl-tag">Ask</span><p>“Rekam meeting ini.”</p></div>
+          <div class="adl-row"><span class="adl-tag">Do</span><p>Ditangkap &amp; diproses AI.</p></div>
+          <div class="adl-row"><span class="adl-tag">Deliver</span><p>Ringkasan, keputusan, action items, follow-up &amp; mindmap.</p></div>
+          <p class="adl-result">Meeting selesai. Pekerjaan berikutnya sudah jelas.</p>
+        </div>
+      </article>
     </div>
 
     <div class="sell reveal">
-      <div>
-        <h3>Berhenti Jadi Admin untuk Pekerjaan Anda Sendiri.</h3>
-      </div>
-      <a href="https://play.google.com/store/apps/details?id=id.co.syntegra.syntia" target="_blank" rel="noopener" class="btn btn-primary btn-block js-play" data-cta="group-daily">Serahkan Task Pertama ke Syntegra <span class="arw" aria-hidden="true">→</span></a>
+      <div><h3>Berhenti Jadi Admin. Ubah Meeting Jadi Action.</h3></div>
+      <a href="https://play.google.com/store/apps/details?id=id.co.syntegra.syntia" target="_blank" rel="noopener" class="btn btn-primary btn-block js-play" data-cta="group-daily-meeting">Serahkan Task Pertama ke Syntegra <span class="arw" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
 <!-- =========================================================
-     §04 — FEATURE GROUP 2: MEETING → ACTION
+     §04 — FEATURE GROUP (GABUNG): DOKUMEN + PRESENTASI/VISUAL
      ========================================================= -->
 <section class="sec sec-soft">
-  <div class="container fg-inner">
-    <div class="fg-copy">
-      <p class="feat-label">Meeting Recorder • AI Summary • Mindmap</p>
-      <h2>Meeting Seharusnya Menghasilkan Keputusan. <span class="hl">Bukan Sekadar Rekaman 57 Menit.</span></h2>
-      <p class="fg-body">
-        Meeting selesai, semua merasa sepakat. Sejam kemudian: siapa handle proposal, deadline kapan,
-        versi mana yang oke? Lalu sibuk mencari lagi di chat, rekaman, dan catatan yang tercecer.
-      </p>
-
+  <div class="container">
+    <div class="sec-head center">
+      <p class="feat-label">Invoice • Purchase Order • Quotation • Translator • AI Presentation • Image Generation</p>
+      <h2>Dari Dokumen sampai Presentasi — <span class="hl">Mulai dari Hasil, Bukan Halaman Kosong.</span></h2>
     </div>
 
-    <div class="fg-media">
-      <!-- §15: Meeting · 1080×1200 (9:10) — alur record→summary→mindmap butuh tinggi -->
-      <figure class="ph ph-tall reveal">
-        <img src="img/syntegra-meeting.webp" loading="lazy" decoding="async"
-             alt="Seorang pria memimpin diskusi santai dengan dua rekan kerja di ruang meeting yang terang."
-             onerror="this.remove()" />
-        <div class="ph-body">
-          <span class="ph-badge">🖼️ Saran gambar</span>
-          <b class="ph-h">FOTO — Diskusi yang produktif</b>
-          <p class="ph-d">Foto aktivitas — seorang <b>pria</b> memimpin diskusi kecil, gestur tangan menjelaskan sementara 1–2 rekan mendengarkan antusias. Fokus pada interaksi dan bahasa tubuh, bukan perangkat. Tanpa tulisan di whiteboard/layar atau teks yang terbaca. Cahaya kantor natural. Framing 1:1 — subjek di tengah.</p>
-          <code class="ph-f">syntegra-meeting.webp · 1200×1200 (1:1)</code>
+    <div class="fg-duo">
+      <!-- DOCUMENTS -->
+      <article class="fg-cell reveal">
+        <figure class="ph ph-duo">
+          <img src="img/syntegra-documents.webp" loading="lazy" decoding="async"
+               alt="Seorang profesional mengurus dokumen sambil bergerak, mengetik di ponsel di lobi kantor."
+               onerror="this.remove()" />
+        </figure>
+        <p class="feat-label sm">Invoice • PO • Quotation • Translator</p>
+        <p class="fg-body">Customer minta quotation, vendor minta PO, finance butuh invoice, partner kirim dokumen asing. <b>Pekerjaannya sederhana. Friksinya yang mahal.</b></p>
+        <div class="adl">
+          <div class="adl-row is-ask"><span class="adl-tag">Ask</span><p>“Buat quotation untuk PT ABC berdasarkan detail ini, lalu siapkan email pengantarnya.”</p></div>
+          <div class="adl-row"><span class="adl-tag">Do</span><p>Menyusun invoice, PO, quotation — sekaligus menerjemahkan.</p></div>
+          <div class="adl-row"><span class="adl-tag">Deliver</span><p>Dokumen + email pengantar, siap kirim.</p></div>
+          <p class="adl-result">Mulai dari hasil, bukan halaman kosong.</p>
         </div>
-      </figure>
-    </div>
+      </article>
 
-    <div class="adl">
-      <div class="adl-row is-ask">
-        <span class="adl-tag">Ask</span>
-        <p>“Rekam meeting ini.”</p>
-      </div>
-      <div class="adl-row">
-        <span class="adl-tag">Do</span>
-        <p>Ditangkap &amp; diproses AI.</p>
-      </div>
-      <div class="adl-row">
-        <span class="adl-tag">Deliver</span>
-        <p>Ringkasan, keputusan, action items, follow-up &amp; mindmap.</p>
-      </div>
-      <p class="adl-result">Meeting selesai. Pekerjaan berikutnya sudah jelas.</p>
+      <!-- CREATIVE -->
+      <article class="fg-cell reveal">
+        <figure class="ph ph-duo">
+          <img src="img/syntegra-creative.webp" loading="lazy" decoding="async"
+               alt="Seseorang mempresentasikan analisis data dengan antusias di depan rekan kerja."
+               onerror="this.remove()" />
+        </figure>
+        <p class="feat-label sm">AI Presentation • Image Generation</p>
+        <p class="fg-body">Ide proposal, konsep campaign, outline — semua sudah ada. Tapi berhenti karena <b>deck &amp; visual belum jadi</b>. Yang harusnya tayang hari ini, tertunda ke besok.</p>
+        <div class="adl">
+          <div class="adl-row is-ask"><span class="adl-tag">Ask</span><p>“Buat presentasi untuk strategi ekspansi ini, lengkap dengan visual untuk campaign-nya.”</p></div>
+          <div class="adl-row"><span class="adl-tag">Do</span><p>AI menyusun materi dari brief Anda.</p></div>
+          <div class="adl-row"><span class="adl-tag">Deliver</span><p>Brief jadi materi siap kembang, jauh lebih cepat.</p></div>
+          <p class="adl-result">Dari brief ke output. Tanpa menunggu momentum hilang.</p>
+        </div>
+      </article>
     </div>
 
     <div class="sell reveal">
-      <div>
-        <h3>Jangan Biarkan Meeting Berakhir Tanpa Eksekusi.</h3>
-      </div>
-      <a href="https://play.google.com/store/apps/details?id=id.co.syntegra.syntia" target="_blank" rel="noopener" class="btn btn-primary btn-block js-play" data-cta="group-meeting">Ubah Meeting Jadi Action <span class="arw" aria-hidden="true">→</span></a>
+      <div><h3>Dokumen &amp; Materi Tidak Harus Dimulai dari Nol.</h3></div>
+      <a href="https://play.google.com/store/apps/details?id=id.co.syntegra.syntia" target="_blank" rel="noopener" class="btn btn-primary btn-block js-play" data-cta="group-docs-creative">Buat dengan Syntegra <span class="arw" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
 <!-- =========================================================
-     §05 — FEATURE GROUP 3: BUSINESS DOCUMENTS & COMMUNICATION
+     §05 — FEATURE GROUP: RESEARCH & INFORMATION (tetap sendiri)
      ========================================================= -->
 <section class="sec">
-  <div class="container fg-inner fg-reverse">
-    <div class="fg-copy">
-      <p class="feat-label">Invoice • Purchase Order • Quotation • Translator</p>
-      <h2>Kerja Administratif Tak Menghasilkan Strategi. <span class="hl">Tapi Menyita Jam Kerja Anda.</span></h2>
-      <p class="fg-body">
-        Customer minta quotation, vendor minta PO, finance butuh invoice, partner kirim dokumen asing.
-        Dibuat, diperiksa, dikirim, dicari lagi. <b>Pekerjaannya sederhana. Friksinya yang mahal.</b>
-      </p>
-
-    </div>
-
-    <div class="fg-media">
-      <!-- §15: Documents · 1200×1200 (1:1) -->
-      <figure class="ph ph-square reveal">
-        <img src="img/syntegra-documents.webp" loading="lazy" decoding="async"
-             alt="Seorang wanita profesional mengetik di ponsel sambil berdiri di lobi kantor dengan tas kerja di bahu."
-             onerror="this.remove()" />
-        <div class="ph-body">
-          <span class="ph-badge">🖼️ Saran gambar</span>
-          <b class="ph-h">FOTO — Urusan beres di mana saja</b>
-          <p class="ph-d">Foto aktivitas — seorang <b>wanita</b> profesional berdiri di lobi atau lokasi klien sambil mengetik di ponsel, tas kerja di bahu, ekspresi percaya diri. Kesan "urusan beres sambil bergerak". Layar diambil dari sudut sehingga tidak ada teks yang terbaca. Framing 1:1 — subjek di tengah.</p>
-          <code class="ph-f">syntegra-documents.webp · 1200×1200 (1:1)</code>
-        </div>
-      </figure>
-    </div>
-
-    <div class="adl">
-      <div class="adl-row is-ask">
-        <span class="adl-tag">Ask</span>
-        <p>“Buat quotation untuk PT ABC berdasarkan detail ini, lalu siapkan email pengantarnya.”</p>
-      </div>
-      <div class="adl-row">
-        <span class="adl-tag">Do</span>
-        <p>Menyusun invoice, PO, quotation — sekaligus menerjemahkan.</p>
-      </div>
-      <div class="adl-row">
-        <span class="adl-tag">Deliver</span>
-        <p>Dokumen + email pengantar, siap kirim.</p>
-      </div>
-      <p class="adl-result">Mulai dari hasil, bukan halaman kosong.</p>
-    </div>
-
-    <div class="sell reveal">
-      <div>
-        <h3>Dokumen Bisnis Tidak Harus Dimulai dari Nol.</h3>
-      </div>
-      <a href="https://play.google.com/store/apps/details?id=id.co.syntegra.syntia" target="_blank" rel="noopener" class="btn btn-primary btn-block js-play" data-cta="group-documents">Buat dengan Syntegra <span class="arw" aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- =========================================================
-     §06 — FEATURE GROUP 4: RESEARCH & INFORMATION
-     ========================================================= -->
-<section class="sec sec-soft">
   <div class="container fg-inner">
     <div class="fg-copy">
       <p class="feat-label">Web Search • News Search • Weather • Exchange Rate • Crypto Info</p>
@@ -1442,99 +1391,26 @@ fbq('init','PIXEL_ID');
         Mencari info itu mudah; menyaring yang relevan itu yang melelahkan. Search, buka, baca, kembali,
         search lagi, bandingkan — lalu lupa tab mana yang tadi penting.
       </p>
-
     </div>
 
     <div class="fg-media">
-      <!-- §15: Research · 1200×1050 (8:7) — copy terpendek -->
       <figure class="ph ph-mid reveal">
         <img src="img/syntegra-research.webp" loading="lazy" decoding="async"
-             alt="Seorang pria menatap laptop dengan ekspresi berpikir, dikelilingi panel Web Search, News, Weather, Exchange Rate, dan Crypto Info."
+             alt="Seorang wanita menatap laptop dengan fokus, dikelilingi panel Web Search, News, Weather, Exchange Rate, dan Crypto Info."
              onerror="this.remove()" />
-        <div class="ph-body">
-          <span class="ph-badge">🖼️ Saran gambar</span>
-          <b class="ph-h">FOTO — Fokus tanpa gangguan</b>
-          <p class="ph-d">Foto aktivitas — seorang <b>pria</b> muda duduk santai di kafe atau meja kerja, menyeruput kopi dengan ekspresi berpikir dan fokus. Suasana tenang, momen menyerap informasi tanpa gangguan. Tanpa dokumen atau layar berteks dalam foto. Framing 1:1 — subjek di tengah.</p>
-          <code class="ph-f">syntegra-research.webp · 1200×1200 (1:1)</code>
-        </div>
       </figure>
     </div>
 
     <div class="adl">
-      <div class="adl-row is-ask">
-        <span class="adl-tag">Ask</span>
-        <p>“Cari perkembangan terbaru industri ini dan rangkum poin yang relevan untuk bisnis saya.”</p>
-      </div>
-      <div class="adl-row">
-        <span class="adl-tag">Do</span>
-        <p>Mencari &amp; menyaring dari web, news, kurs &amp; sumber lain.</p>
-      </div>
-      <div class="adl-row">
-        <span class="adl-tag">Deliver</span>
-        <p>Jawaban ringkas, siap pakai — tanpa belasan tab.</p>
-      </div>
+      <div class="adl-row is-ask"><span class="adl-tag">Ask</span><p>“Cari perkembangan terbaru industri ini dan rangkum poin yang relevan untuk bisnis saya.”</p></div>
+      <div class="adl-row"><span class="adl-tag">Do</span><p>Mencari &amp; menyaring dari web, news, kurs &amp; sumber lain.</p></div>
+      <div class="adl-row"><span class="adl-tag">Deliver</span><p>Jawaban ringkas, siap pakai — tanpa belasan tab.</p></div>
       <p class="adl-result">Lebih sedikit mencari. Lebih cepat paham.</p>
     </div>
 
     <div class="sell reveal">
-      <div>
-        <h3>Anda Tidak Membutuhkan Lebih Banyak Tab.</h3>
-      </div>
+      <div><h3>Anda Tidak Membutuhkan Lebih Banyak Tab.</h3></div>
       <a href="https://play.google.com/store/apps/details?id=id.co.syntegra.syntia" target="_blank" rel="noopener" class="btn btn-primary btn-block js-play" data-cta="group-research">Anda Membutuhkan Jawaban <span class="arw" aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- =========================================================
-     §07 — FEATURE GROUP 5: AI PRESENTATION & VISUAL
-     ========================================================= -->
-<section class="sec">
-  <div class="container fg-inner fg-reverse">
-    <div class="fg-copy">
-      <p class="feat-label">AI Presentation • Image Generation</p>
-      <h2>Ide Anda Sudah Siap. <span class="hl">Mengapa Materinya Masih Harus Menunggu?</span></h2>
-      <p class="fg-body">
-        Ide proposal, konsep campaign, outline — semua sudah ada. Tapi berhenti karena deck &amp; visual
-        belum jadi. Yang harusnya tayang hari ini, tertunda ke besok.
-      </p>
-
-    </div>
-
-    <div class="fg-media">
-      <!-- §15: Creative AI · 1080×1200 (9:10) -->
-      <figure class="ph ph-tall reveal">
-        <img src="img/syntegra-creative.webp" loading="lazy" decoding="async"
-             alt="Seorang wanita mempresentasikan ide dengan antusias kepada dua rekan kerja di ruang kerja yang santai."
-             onerror="this.remove()" />
-        <div class="ph-body">
-          <span class="ph-badge">🖼️ Saran gambar</span>
-          <b class="ph-h">FOTO — Ide jadi presentasi</b>
-          <p class="ph-d">Foto aktivitas — seorang <b>wanita</b> mempresentasikan ide dengan antusias kepada 1–2 rekan di ruang kerja santai; audiens tersenyum, energi kolaboratif. Bila ada layar/proyektor, tampilkan blur dari sudut sehingga tanpa teks yang terbaca. Framing 1:1 — subjek di tengah.</p>
-          <code class="ph-f">syntegra-creative.webp · 1200×1200 (1:1)</code>
-        </div>
-      </figure>
-    </div>
-
-    <div class="adl">
-      <div class="adl-row is-ask">
-        <span class="adl-tag">Ask</span>
-        <p>“Buat presentasi untuk strategi ekspansi ini, lengkap dengan visual untuk campaign-nya.”</p>
-      </div>
-      <div class="adl-row">
-        <span class="adl-tag">Do</span>
-        <p>AI menyusun materi dari brief Anda.</p>
-      </div>
-      <div class="adl-row">
-        <span class="adl-tag">Deliver</span>
-        <p>Brief jadi materi siap kembang, jauh lebih cepat.</p>
-      </div>
-    </div>
-
-    <div class="sell reveal">
-      <div>
-        <h3>Dari Brief ke Output. Tanpa Menunggu Momentum Hilang.</h3>
-      </div>
-      <a href="https://play.google.com/store/apps/details?id=id.co.syntegra.syntia" target="_blank" rel="noopener" class="btn btn-primary btn-block js-play" data-cta="group-creative">Buat dengan AI <span class="arw" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
