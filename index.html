@@ -379,6 +379,21 @@ h2 .hl,.h2 .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
   border-radius:var(--r-md);padding:18px 20px;box-shadow:var(--shadow-xs)}
 .transition-line b{font-size:16.5px;font-weight:700;line-height:1.5}
 
+/* Problem section — daftar pain sebagai poin yang ditonjolkan (kartu + ikon ✕) */
+.pains{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:clamp(20px,3vw,30px) 0 20px;padding:0}
+.pain-item{display:flex;gap:12px;align-items:center;background:var(--white);border:1px solid var(--line);
+  border-left:3px solid #E8604E;border-radius:var(--r-md);padding:14px 16px;box-shadow:var(--shadow-xs);
+  transition:transform .18s var(--ease),box-shadow .18s var(--ease)}
+.pain-item:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+.pain-item .pain-ic{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:rgba(232,96,78,.12);color:#E1503C}
+.pain-item .pain-ic svg{width:15px;height:15px}
+.pain-item p{margin:0;font-size:15px;font-weight:600;color:var(--ink);line-height:1.35}
+.pains-note{margin:0 0 2px;font-size:clamp(15px,1.9vw,17px);color:var(--muted);line-height:1.6}
+.pains-note b{color:var(--ink)}
+@media(max-width:820px){.pains{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.pains{grid-template-columns:1fr}}
+
 /* Rapatkan jarak atas (di atas banner) & bawah section #masalah. Default .sec
    (≈120px di desktop) terlalu lebar → latar biru muda-nya mengintip di layar awal. */
 #masalah{padding-top:clamp(20px,2.8vw,40px);padding-bottom:clamp(26px,3.6vw,52px)}
@@ -1221,14 +1236,24 @@ fbq('init','PIXEL_ID');
       <h2>Bukan Kurang Tools. <span class="hl">Tapi Terlalu Banyak Hal Kecil yang Anda Urus Sendiri.</span></h2>
       <div class="sec-head-col2">
         <p class="lead">
-          Bukan pekerjaan besar yang menguras energi — tapi puluhan hal kecil: jadwal yang berubah, catatan
-          tercecer, quotation yang belum dibuat, riset yang membuka belasan tab, hasil meeting yang tak jadi
-          action. Kecil satu per satu; menumpuk sehari penuh, semuanya mencuri waktu untuk hal yang benar-benar
-          penting — mengambil keputusan dan mengembangkan bisnis.
+          Bukan pekerjaan besar yang menguras energi. Yang benar-benar menyita fokus justru
+          <b>puluhan hal kecil</b> yang menumpuk sepanjang hari:
         </p>
-        <p class="transition-line"><b>Syntegra dibuat untuk mengambil pekerjaan itu dari tangan Anda.</b></p>
       </div>
     </div>
+
+    <ul class="pains reveal">
+      <li class="pain-item"><span class="pain-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><p>Jadwal meeting yang berubah-ubah</p></li>
+      <li class="pain-item"><span class="pain-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><p>Catatan &amp; to-do yang tercecer</p></li>
+      <li class="pain-item"><span class="pain-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><p>Quotation &amp; dokumen belum dibuat</p></li>
+      <li class="pain-item"><span class="pain-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><p>Riset yang membuka belasan tab</p></li>
+      <li class="pain-item"><span class="pain-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><p>Email menumpuk &amp; follow-up tertunda</p></li>
+      <li class="pain-item"><span class="pain-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><p>Hasil meeting yang tak jadi action</p></li>
+    </ul>
+
+    <p class="pains-note">Kecil satu per satu. Dikumpulkan sehari penuh, semuanya mencuri waktu untuk <b>mengambil keputusan &amp; mengembangkan bisnis.</b></p>
+
+    <p class="transition-line"><b>Syntegra dibuat untuk mengambil pekerjaan itu dari tangan Anda.</b></p>
   </div>
 </section>
 
