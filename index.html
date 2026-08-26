@@ -374,10 +374,10 @@ h2 .hl,.h2 .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
 /* =========================================================
    §02C — PROBLEM
    ========================================================= */
-.transition-line{margin-top:26px;display:flex;gap:13px;align-items:flex-start;
-  background:var(--white);border:1px solid var(--line);border-left:4px solid var(--bright);
-  border-radius:var(--r-md);padding:18px 20px;box-shadow:var(--shadow-xs)}
-.transition-line b{font-size:16.5px;font-weight:700;line-height:1.5}
+.transition-line{margin:clamp(24px,3.4vw,40px) 0 0;display:block;
+  font-size:clamp(20px,2.9vw,30px);font-weight:800;letter-spacing:-.02em;line-height:1.28;color:var(--ink)}
+.transition-line .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* Problem section — daftar pain sebagai poin yang ditonjolkan (kartu + ikon ✕) */
 .pains{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:clamp(20px,3vw,30px) 0 20px;padding:0}
@@ -1255,7 +1255,7 @@ fbq('init','PIXEL_ID');
 
     <p class="pains-note">Kecil satu per satu. Dikumpulkan sehari penuh, semuanya mencuri waktu untuk <b>mengambil keputusan &amp; mengembangkan bisnis.</b></p>
 
-    <p class="transition-line"><b>Syntegra dibuat untuk mengambil pekerjaan itu dari tangan Anda.</b></p>
+    <p class="transition-line">Syntegra dibuat untuk <span class="hl">mengambil pekerjaan itu dari tangan&nbsp;Anda.</span></p>
   </div>
 </section>
 
