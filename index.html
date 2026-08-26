@@ -1006,6 +1006,9 @@ h2 .hl,.h2 .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
 @media (prefers-reduced-motion: reduce){
   .sec-white::after,.hero::after,.sec:not(.sec-soft):not(.sec-white):not(.sec-dark)::after{animation:none}
 }
+
+/* Kalimat perintah hero dijaga satu baris di desktop (mobile tetap boleh wrap). */
+@media (min-width:1024px){ .hero-sub .cmd-oneline{white-space:nowrap} }
 </style>
 
 <!-- =========================================================
@@ -1130,7 +1133,7 @@ fbq('init','PIXEL_ID');
 
       <p class="hero-sub">
         Satu platform AI untuk seluruh pekerjaan harian — email, kalender, meeting, dokumen bisnis, riset,
-        presentasi, hingga reminder. <b>Anda perintahkan.<br />AI&nbsp;asisten (Syntia) yang&nbsp;mengerjakan.</b>
+        presentasi, hingga reminder.<br /><b class="cmd-oneline">Anda perintahkan. AI asisten (Syntia) yang mengerjakan.</b>
       </p>
 
       <div class="hero-cta">
