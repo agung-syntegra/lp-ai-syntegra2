@@ -964,36 +964,23 @@ h2 .hl,.h2 .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
 
 
 /* =========================================================
-   AURORA GLOW — gradien berpendar pada latar section terpilih.
-   Aktif di: Hero (halus, latar terang) + semua .sec-dark
-   (A Day, Trust & Security, Final CTA). Aurora dipasang di ::after
-   dengan z-index:-1 di dalam stacking-context (isolation) sehipun
-   .grid-bg sudah memakai ::before — jadi tidak bentrok. Konten tetap
-   di atas glow; blob di-clip oleh overflow:hidden per-section.
+   AURORA GLOW — HANYA pada section latar PUTIH (.sec-white):
+   How it works, Positioning, Pricing. Intensitas dinaikkan
+   (lebih pekat) agar glow lebih terasa di atas latar putih.
+   Dipasang di ::after (z-index:-1 dalam stacking-context isolation)
+   → konten tetap di atas glow; blob di-clip oleh overflow:hidden.
    ========================================================= */
-.hero,.sec-dark{isolation:isolate;overflow:hidden}
-.hero::after,.sec-dark::after{
+.sec-white{isolation:isolate;overflow:hidden}
+.sec-white::after{
   content:"";position:absolute;inset:-25% -12%;z-index:-1;pointer-events:none;
-  filter:blur(42px) saturate(128%);
+  filter:blur(38px) saturate(140%);
   will-change:transform,opacity;
   animation:auroraDrift 22s ease-in-out infinite alternate;
-}
-/* Latar gelap → aurora pekat & benar-benar berpendar */
-.sec-dark::after{
   background:
-    radial-gradient(42% 55% at 15% 20%,  rgba(56,182,240,.48), transparent 70%),
-    radial-gradient(38% 48% at 85% 8%,   rgba(126,92,255,.36), transparent 72%),
-    radial-gradient(52% 56% at 78% 92%,  rgba(46,90,214,.46),  transparent 72%),
-    radial-gradient(40% 46% at 32% 108%, rgba(38,222,190,.24), transparent 70%);
-}
-/* Latar terang (hero) → aurora lembut sebagai ambient glow */
-.hero::after{
-  background:
-    radial-gradient(40% 52% at 12% 26%, rgba(56,182,240,.24), transparent 72%),
-    radial-gradient(34% 44% at 88% 6%,  rgba(126,92,255,.16), transparent 74%),
-    radial-gradient(46% 50% at 82% 96%, rgba(46,90,214,.18),  transparent 74%),
-    radial-gradient(34% 40% at 40% 110%,rgba(38,222,190,.13), transparent 72%);
-  opacity:.9;
+    radial-gradient(44% 56% at 14% 16%,  rgba(56,182,240,.58), transparent 68%),
+    radial-gradient(40% 50% at 88% 6%,   rgba(126,92,255,.46), transparent 70%),
+    radial-gradient(54% 58% at 82% 94%,  rgba(46,90,214,.54),  transparent 70%),
+    radial-gradient(44% 50% at 28% 112%, rgba(38,222,190,.36), transparent 70%);
 }
 @keyframes auroraDrift{
   0%  {transform:translate3d(0,0,0) scale(1)}
@@ -1001,7 +988,7 @@ h2 .hl,.h2 .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
   100%{transform:translate3d(-2%,2%,0) scale(1.05)}
 }
 @media (prefers-reduced-motion: reduce){
-  .hero::after,.sec-dark::after{animation:none}
+  .sec-white::after{animation:none}
 }
 </style>
 
