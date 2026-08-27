@@ -102,7 +102,7 @@ button{font:inherit}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;
   min-height:54px;padding:15px 26px;border-radius:var(--r-btn);
   font-weight:700;font-size:16.5px;line-height:1.15;text-align:center;
-  border:1px solid transparent;cursor:pointer;
+  border:1px solid transparent;cursor:pointer;-webkit-tap-highlight-color:transparent;
   transition:transform .18s var(--ease),box-shadow .25s var(--ease),background .2s,border-color .2s,color .2s}
 .btn:active{transform:translateY(1px)}
 .btn .arw{transition:transform .22s var(--ease)}
@@ -1008,6 +1008,19 @@ h2 .hl,.h2 .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
 }
 @media (prefers-reduced-motion: reduce){
   .sec-white::after,.hero::after,.sec:not(.sec-soft):not(.sec-white):not(.sec-dark)::after{animation:none}
+}
+
+/* ===== Perangkat sentuh: cegah sticky :hover (efek "putih nyangkut" saat tap) ===== */
+@media (hover: none){
+  .btn-outline:hover{background:var(--white);color:var(--navy);border-color:var(--line)}
+  .btn-light:hover{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.32)}
+  .sec-dark .btn-primary:hover{background:#fff;color:var(--navy)}
+  .pcard-featured .btn-outline:hover{background:#fff;color:var(--navy);border-color:#fff}
+  .btn-web:hover{opacity:1}
+}
+@media (hover: none) and (max-width:759px){
+  .hero .btn-primary:hover{background:var(--grad);color:#fff;box-shadow:0 18px 38px -16px rgba(26,91,176,.72)}
+  .hero .btn-outline:hover{background:var(--white);color:var(--navy);border-color:var(--line)}
 }
 
 /* Kalimat perintah hero dijaga satu baris di desktop (mobile tetap boleh wrap). */
