@@ -1023,6 +1023,29 @@ h2 .hl,.h2 .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
   .hero .btn-outline:hover{background:var(--white);color:var(--navy);border-color:var(--line)}
 }
 
+/* ===== Widget WhatsApp mengambang (pojok kanan bawah) ===== */
+.wa-float{position:fixed;right:clamp(16px,3vw,26px);bottom:clamp(16px,3vw,26px);z-index:300;
+  width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;color:#fff;
+  box-shadow:0 14px 30px -8px rgba(37,211,102,.55),0 6px 16px rgba(0,0,0,.22);
+  -webkit-tap-highlight-color:transparent;transition:transform .2s ease,box-shadow .2s ease}
+.wa-float:active{transform:scale(.96)}
+.wa-float .wa-ic{width:33px;height:33px}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;
+  animation:waPulse 2.2s ease-out infinite}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.wa-tip{position:absolute;right:70px;top:50%;transform:translateY(-50%) translateX(6px);
+  background:#0B1220;color:#fff;font-size:13.5px;font-weight:600;padding:8px 13px;border-radius:9px;
+  white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;
+  box-shadow:0 8px 22px -6px rgba(0,0,0,.35)}
+.wa-tip::after{content:"";position:absolute;right:-5px;top:50%;transform:translateY(-50%);
+  border:5px solid transparent;border-left-color:#0B1220}
+@media (hover:hover){
+  .wa-float:hover{transform:scale(1.06)}
+  .wa-float:hover .wa-tip{opacity:1;transform:translateY(-50%) translateX(0)}
+}
+@media (prefers-reduced-motion:reduce){ .wa-float::before{animation:none} }
+@media (max-width:759px){ .wa-float{width:54px;height:54px} .wa-float .wa-ic{width:30px;height:30px} }
+
 /* Kalimat perintah hero dijaga satu baris di desktop (mobile tetap boleh wrap). */
 @media (min-width:1024px){ .hero-sub .cmd-oneline{white-space:nowrap} }
 </style>
@@ -1729,6 +1752,16 @@ fbq('init','PIXEL_ID');
     </p>
   </div>
 </footer>
+
+<!-- Widget WhatsApp mengambang. TIDAK memakai class js-cta/js-play agar href
+     wa.me tidak ditimpa oleh app.js. -->
+<a class="wa-float" href="https://wa.me/62818499997" target="_blank" rel="noopener"
+   aria-label="Chat dengan Syntegra via WhatsApp" data-cta="whatsapp-float">
+  <span class="wa-tip">Chat via WhatsApp</span>
+  <svg class="wa-ic" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+    <path d="M16.04 4C9.9 4 4.92 8.98 4.92 15.12c0 2.13.6 4.11 1.63 5.8L4.5 28l7.26-1.9a11.06 11.06 0 0 0 4.28.86h.01c6.14 0 11.12-4.98 11.12-11.12S22.18 4 16.04 4zm0 20.3h-.01c-1.35 0-2.68-.36-3.83-1.05l-.27-.16-4.3 1.13 1.15-4.19-.18-.29a9.2 9.2 0 0 1-1.4-4.87c0-5.08 4.14-9.22 9.23-9.22 2.46 0 4.78.96 6.52 2.7a9.16 9.16 0 0 1 2.7 6.52c0 5.09-4.14 9.23-9.23 9.23zm5.06-6.91c-.28-.14-1.64-.81-1.9-.9-.25-.09-.44-.14-.62.14-.18.28-.71.9-.87 1.08-.16.18-.32.2-.6.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.38-1.63-1.54-1.91-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.05-.22-.53-.45-.46-.62-.47l-.53-.01c-.18 0-.48.07-.73.35-.25.28-.96.94-.96 2.3 0 1.35.98 2.66 1.12 2.84.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.65.21 1.25.18 1.72.11.52-.08 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/>
+  </svg>
+</a>
 
 <!-- Sticky bottom CTA mobile (§15 blueprint) sengaja DIHILANGKAN atas permintaan.
      Spacer .tail-space ikut dilepas karena hanya ada untuk menyediakan ruang
