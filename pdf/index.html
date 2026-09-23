@@ -1090,11 +1090,45 @@ main > section .sec-head{margin-bottom:18px!important}
 #faq .sec-head{margin-bottom:26px!important}
 #harga{align-items:flex-start!important}
 #harga > .container{transform-origin:top center!important}
-#harga .sec-head{margin-bottom:44px!important}
-#faq .faq-item summary{min-height:0!important;padding-top:10px!important;padding-bottom:10px!important}
-#faq .faq-body{padding-bottom:10px!important}
-.pcard{padding-bottom:18px!important}
+#harga .sec-head{margin-bottom:20px!important}
+#faq .faq-item summary{min-height:0!important;padding-top:9px!important;padding-bottom:9px!important}
+#faq .faq-body{padding-bottom:9px!important}
+.pcard{padding-bottom:16px!important}
 .pcard .pfeats{margin-bottom:0!important}
+/* --- Split-mode: tiap slide harus muat scale 1 (font terkecil tetap real >=14px).
+       Yang dirapatkan hanya gambar & spasi, BUKAN ukuran font teks. --- */
+#masalah .problem-banner{aspect-ratio:auto!important;height:150px!important;margin-bottom:18px!important}
+#sehari2 .day-close{margin-top:18px!important}
+#sehari2 .day-close .sell{margin-top:12px!important;padding:15px 18px!important}
+.sec-white .cmp-note{margin-top:12px!important}
+#faq .faq{gap:8px 20px!important}
+#harga .pcard{padding:18px 20px 14px!important}
+#harga .pfeats{margin:12px 0 0!important;gap:6px!important}
+#harga .price-amount{margin-top:9px!important}
+#harga .pcredit{margin-top:9px!important}
+#harga .pcard .who{margin-top:7px!important}
+#harga .pcard-flag{top:-11px!important}
+/* dorongan tahap 2 */
+.fg-inner{gap:22px!important}
+#sehari2 .day-item{padding-bottom:11px!important}
+#sehari2 .day-close .big{font-size:22px!important}
+#sehari2 .day-close .brandline{margin-top:8px!important}
+.sec-white .cmp table td,.sec-white .cmp table th{padding-top:9px!important;padding-bottom:9px!important}
+#faq .sec-head{margin-bottom:18px!important}
+#faq .faq{gap:6px 20px!important}
+#harga .price-now{font-size:34px!important}
+#harga .pfeats{gap:3px!important}
+#harga .pcard{padding:16px 18px 12px!important}
+/* dorongan tahap 3 */
+#sehari2 .day-close .sell{display:none!important}
+#harga .pfeats li{line-height:1.26!important}
+#harga .pfeats{gap:2px!important}
+#harga .sec-head{margin-bottom:12px!important}
+#harga .price-amount{margin-top:6px!important}
+#harga .pcredit{padding:7px 12px!important;margin-top:6px!important}
+#harga .pcard{padding:14px 18px 12px!important}
+#faq .faq-item summary{padding-top:7px!important;padding-bottom:7px!important}
+#faq .faq-body{padding-bottom:7px!important}
 .slide-foot{position:absolute;left:0;right:0;bottom:28px;display:flex;align-items:center;justify-content:space-between;margin:0 54px;padding-top:8px;border-top:1px solid var(--line);font-size:12px;font-weight:600;letter-spacing:.01em;color:var(--muted);pointer-events:none;z-index:6}
 .slide-foot .sf-num{font-variant-numeric:tabular-nums}
 .sec-dark .slide-foot,.on-dark .slide-foot{color:rgba(255,255,255,.72);border-top-color:rgba(255,255,255,.22)}
@@ -1254,6 +1288,18 @@ main > section .sec-head{margin-bottom:18px!important}
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- =========================================================
+     §02C — THE REAL PROBLEM (bagian 2: daftar hal kecil)
+     ========================================================= -->
+<section class="sec sec-soft" id="masalah2">
+  <div class="container">
+    <div class="sec-head center">
+      <h2>Hal Kecil yang <span class="hl">Diam-diam Menghabiskan Hari Anda.</span></h2>
+    </div>
+
     <ul class="pains reveal">
       <li class="pain-item"><span class="pain-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><p>Jadwal meeting yang berubah-ubah</p></li>
       <li class="pain-item"><span class="pain-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><p>Catatan &amp; to-do yang tercecer</p></li>
@@ -1292,16 +1338,19 @@ main > section .sec-head{margin-bottom:18px!important}
       </figure>
     </div>
 
+  </div>
+</section>
+
+<section class="sec" id="pekerjaan2">
+  <div class="container">
+    <div class="sec-head center">
+      <h2>Berhenti Jadi Admin. <span class="hl">Ubah Meeting Jadi Action.</span></h2>
+    </div>
     <div class="adl">
       <div class="adl-row is-ask"><span class="adl-tag">Ask</span><p>“Ringkas email penting hari ini, pindahkan meeting jam 2 ke jam 3, lalu rekam meeting berikutnya jadi ringkasan &amp; action items.”</p></div>
       <div class="adl-row"><span class="adl-tag">Do</span><p>Dieksekusi lewat Gmail, Calendar, Notes, Reminder &amp; Meeting Recorder AI.</p></div>
       <div class="adl-row"><span class="adl-tag">Deliver</span><p>Inbox &amp; jadwal tertata, plus ringkasan meeting, keputusan, action items &amp; mindmap.</p></div>
       <p class="adl-result">Lebih sedikit mengurus aplikasi. Setiap meeting langsung jadi eksekusi.</p>
-    </div>
-
-    <div class="sell reveal">
-      <div><h3>Berhenti Jadi Admin. Ubah Meeting Jadi Action.</h3></div>
-      <a href="https://play.google.com/store/apps/details?id=id.co.syntegra.syntia" target="_blank" rel="noopener" class="btn btn-primary btn-block js-play" data-cta="group-daily-meeting">Serahkan Task Pertama ke Syntegra <span class="arw" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -1329,16 +1378,19 @@ main > section .sec-head{margin-bottom:18px!important}
       </figure>
     </div>
 
+  </div>
+</section>
+
+<section class="sec sec-soft" id="dokumen2">
+  <div class="container">
+    <div class="sec-head center">
+      <h2>Dokumen &amp; Materi <span class="hl">Tidak Harus Dimulai dari Nol.</span></h2>
+    </div>
     <div class="adl">
       <div class="adl-row is-ask"><span class="adl-tag">Ask</span><p>“Buat quotation untuk PT ABC + email pengantarnya, lalu susun deck strategi ekspansi lengkap dengan visual campaign-nya.”</p></div>
       <div class="adl-row"><span class="adl-tag">Do</span><p>Menyusun invoice/PO/quotation, menerjemahkan, sekaligus membangun presentasi &amp; visual dari brief.</p></div>
       <div class="adl-row"><span class="adl-tag">Deliver</span><p>Dokumen siap kirim + deck &amp; visual siap kembang — jauh lebih cepat.</p></div>
       <p class="adl-result">Mulai dari hasil, bukan halaman kosong.</p>
-    </div>
-
-    <div class="sell reveal">
-      <div><h3>Dokumen &amp; Materi Tidak Harus Dimulai dari Nol.</h3></div>
-      <a href="https://play.google.com/store/apps/details?id=id.co.syntegra.syntia" target="_blank" rel="noopener" class="btn btn-primary btn-block js-play" data-cta="group-docs-creative">Buat dengan Syntegra <span class="arw" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -1365,16 +1417,19 @@ main > section .sec-head{margin-bottom:18px!important}
       </figure>
     </div>
 
+  </div>
+</section>
+
+<section class="sec" id="research2">
+  <div class="container">
+    <div class="sec-head center">
+      <h2>Anda Tidak Butuh Lebih Banyak Tab. <span class="hl">Anda Butuh Jawaban.</span></h2>
+    </div>
     <div class="adl">
       <div class="adl-row is-ask"><span class="adl-tag">Ask</span><p>“Cari perkembangan terbaru industri ini dan rangkum poin yang relevan untuk bisnis saya.”</p></div>
       <div class="adl-row"><span class="adl-tag">Do</span><p>Mencari &amp; menyaring dari web, news, kurs &amp; sumber lain.</p></div>
       <div class="adl-row"><span class="adl-tag">Deliver</span><p>Jawaban ringkas, siap pakai — tanpa belasan tab.</p></div>
       <p class="adl-result">Lebih sedikit mencari. Lebih cepat paham.</p>
-    </div>
-
-    <div class="sell reveal">
-      <div><h3>Anda Tidak Membutuhkan Lebih Banyak Tab.</h3></div>
-      <a href="https://play.google.com/store/apps/details?id=id.co.syntegra.syntia" target="_blank" rel="noopener" class="btn btn-primary btn-block js-play" data-cta="group-research">Anda Membutuhkan Jawaban <span class="arw" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -1410,6 +1465,16 @@ main > section .sec-head{margin-bottom:18px!important}
           <p class="day-out">Meeting summary + action items + mindmap.</p>
         </div>
       </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec sec-dark on-dark" id="sehari2">
+  <div class="container">
+    <div class="sec-head center">
+      <h2>Satu Hari, <span class="hl">Enam Pekerjaan Selesai.</span></h2>
+    </div>
+    <ol class="day">
       <li class="day-item reveal">
         <span class="day-time">13:30</span>
         <div class="day-card">
@@ -1772,7 +1837,9 @@ window.addEventListener('load',function(){
     var foot=sec.querySelector(':scope > .slide-foot');
     var avail=sec.clientHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom)-(foot?58:0);
     var need=inner.scrollHeight;
-    if(need>avail){var sc=Math.max(0.35,avail/need);inner.style.transformOrigin='center center';inner.style.transform='scale('+sc.toFixed(4)+')';}
+    // Tidak boleh memperkecil di bawah 1: menjaga font terkecil tetap real >=14px.
+    // Bila konten masih lebih tinggi dari frame, catat di data-attr untuk audit (idealnya 0).
+    sec.setAttribute('data-overflow', Math.max(0, Math.round(need-avail)));
   });
 });
 </script>
