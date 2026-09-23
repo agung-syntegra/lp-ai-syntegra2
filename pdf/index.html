@@ -1756,6 +1756,16 @@ window.addEventListener('load',function(){
       sec.appendChild(f);
     });
   })();
+  // Font minimal 14px untuk semua teks slide yang terlihat (footer tetap 12px).
+  (function(){
+    document.querySelectorAll('main *').forEach(function(el){
+      if(el.closest('.slide-foot')) return;
+      if(!el.checkVisibility||!el.checkVisibility({checkVisibilityCSS:true})) return;
+      var hasText=Array.prototype.some.call(el.childNodes,function(n){return n.nodeType===3 && n.textContent.trim();});
+      if(!hasText) return;
+      if(parseFloat(getComputedStyle(el).fontSize)<14) el.style.fontSize='14px';
+    });
+  })();
   document.querySelectorAll('main > section').forEach(function(sec){
     var inner=sec.querySelector(':scope > .container'); if(!inner) return;
     var cs=getComputedStyle(sec);
