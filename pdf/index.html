@@ -1046,6 +1046,18 @@ h2 .hl,.h2 .hl{background:linear-gradient(120deg,var(--primary),var(--navy));
 @media (prefers-reduced-motion:reduce){ .wa-float::before{animation:none} }
 @media (max-width:759px){ .wa-float{width:54px;height:54px} .wa-float .wa-ic{width:30px;height:30px} }
 
+/* ===== Kontak sales di bawah box CTA akhir ===== */
+.final-contact{text-align:center;margin-top:clamp(22px,3vw,32px)}
+.final-contact .fc-label{font-size:14px;color:#AFC9E6;margin:0 0 6px}
+.final-contact .fc-name{font-size:16.5px;font-weight:700;color:#fff;margin:0 0 12px}
+.final-contact .fc-name span{font-weight:500;color:#B7D2EE;font-size:14px}
+.final-contact .fc-links{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:center}
+.final-contact .fc-item{display:inline-flex;align-items:center;gap:8px;color:#EAF0FF;font-weight:600;font-size:15px;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.final-contact .fc-item svg{width:18px;height:18px;flex:none}
+.final-contact .fc-item .wa-i{color:#25D366}
+.final-contact .fc-item .em-i{color:#38B6F0}
+@media (hover:hover){ .final-contact .fc-item:hover{color:#fff} }
+
 /* Kalimat perintah hero dijaga satu baris di desktop (mobile tetap boleh wrap). */
 @media (min-width:1024px){ .hero-sub .cmd-oneline{white-space:nowrap} }
 </style>
@@ -1669,6 +1681,21 @@ main > section .sec-head{margin-bottom:18px!important}
         <li>Tanpa komitmen</li>
         <li>Upgrade kapan saja</li>
       </ul>
+    </div>
+
+    <div class="final-contact">
+      <p class="fc-label">Info dan lain-lain hubungi:</p>
+      <p class="fc-name">Fattah Tammam Fikri <span>(Sales Executive)</span></p>
+      <div class="fc-links">
+        <a href="https://wa.me/6281936602594" target="_blank" rel="noopener" class="fc-item" data-cta="contact-wa">
+          <svg class="wa-i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.48 1.3 4.95L2 22l5.25-1.38c1.42.78 3.02 1.19 4.79 1.19h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm4.9 13.9c-.2.58-1.18 1.11-1.62 1.15-.44.05-.85.23-2.87-.6-2.42-.98-3.96-3.45-4.08-3.61-.12-.16-.98-1.3-.98-2.48 0-1.18.62-1.76.84-2 .22-.24.48-.3.64-.3l.46.01c.15.01.35-.06.54.41.2.48.68 1.66.74 1.78.06.12.1.26.02.42-.08.16-.12.26-.24.4l-.36.42c-.12.12-.24.25-.1.49.14.24.62 1.02 1.33 1.65.91.81 1.68 1.06 1.92 1.18.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.4.66 1.64.78.24.12.4.18.46.28.06.1.06.58-.14 1.16z"/></svg>
+          081936602594
+        </a>
+        <a href="mailto:fattah@syntegra.co.id" class="fc-item" data-cta="contact-email">
+          <svg class="em-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          fattah@syntegra.co.id
+        </a>
+      </div>
     </div>
   </div>
 </section>
