@@ -1838,9 +1838,9 @@ main .feat-label{font-size:12px!important}
 
 <script>
 window.addEventListener('load',function(){
-  // Footer tiap slide (kecuali hero): brand di kiri, nomor N/total di kanan.
+  // Footer tiap slide (kecuali hero/cover depan & slide terakhir/cover belakang).
   (function(){
-    var secs=Array.prototype.slice.call(document.querySelectorAll('main > section')).slice(1);
+    var secs=Array.prototype.slice.call(document.querySelectorAll('main > section')).slice(1,-1);
     var total=secs.length;
     secs.forEach(function(sec,i){
       var f=document.createElement('div');f.className='slide-foot';
