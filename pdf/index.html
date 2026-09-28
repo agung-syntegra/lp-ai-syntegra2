@@ -1136,11 +1136,15 @@ main > section .sec-head{margin-bottom:18px!important}
 #sehari .day-item::before{display:block!important;bottom:-17px!important}
 #sehari .day-item:nth-child(3)::before,#sehari .day-item:nth-child(6)::before{display:none!important}
 /* Research (gabungan): rapatkan agar copy+gambar+ADL muat satu slide */
-#research .fg-inner{gap:12px!important}
-#research .fg-body{margin-top:10px!important}
-#research .adl-row{padding:9px 18px!important}
-#research .adl-result{padding:9px 18px!important}
+#research .fg-inner,#dokumen .fg-inner{gap:12px!important}
+#research .fg-body,#dokumen .fg-body{margin-top:10px!important}
+#research .adl-row,#dokumen .adl-row{padding:9px 18px!important}
+#research .adl-result,#dokumen .adl-result{padding:9px 18px!important}
 #research .fg-media .ph{max-height:350px!important}
+#dokumen .fg-media .ph{max-height:318px!important}
+#dokumen h2{font-size:30px!important;line-height:1.22!important}
+#dokumen .fg-body{font-size:15px!important;line-height:1.5!important}
+#dokumen .feat-label{margin-bottom:8px!important}
 #harga .pfeats li{line-height:1.26!important}
 #harga .pfeats{gap:2px!important}
 #harga .sec-head{margin-bottom:12px!important}
@@ -1401,7 +1405,7 @@ main > section .sec-head{margin-bottom:18px!important}
 <!-- =========================================================
      §04 — FEATURE GROUP (GABUNG): DOKUMEN + PRESENTASI/VISUAL
      ========================================================= -->
-<section class="sec sec-soft">
+<section class="sec sec-soft" id="dokumen">
   <div class="container fg-inner fg-reverse">
     <div class="fg-copy">
       <p class="feat-label">Invoice • PO • Quotation • Translator • AI Presentation • Image Generation</p>
@@ -1421,14 +1425,6 @@ main > section .sec-head{margin-bottom:18px!important}
       </figure>
     </div>
 
-  </div>
-</section>
-
-<section class="sec sec-soft" id="dokumen2">
-  <div class="container">
-    <div class="sec-head center">
-      <h2>Dokumen &amp; Materi <span class="hl">Tidak Harus Dimulai dari Nol.</span></h2>
-    </div>
     <div class="adl">
       <div class="adl-row is-ask"><span class="adl-tag">Ask</span><p>“Buat quotation untuk PT ABC + email pengantarnya, lalu susun deck strategi ekspansi lengkap dengan visual campaign-nya.”</p></div>
       <div class="adl-row"><span class="adl-tag">Do</span><p>Menyusun invoice/PO/quotation, menerjemahkan, sekaligus membangun presentasi &amp; visual dari brief.</p></div>
