@@ -1130,9 +1130,11 @@ main > section .sec-head{margin-bottom:18px!important}
 #harga .pcard{padding:16px 18px 12px!important}
 /* dorongan tahap 3 */
 #sehari .day-close .sell{display:none!important}
-#sehari .day{grid-template-columns:1fr 1fr!important;column-gap:26px!important;row-gap:14px!important;max-width:none!important}
+#sehari .sec-head{margin-bottom:36px!important}
+#sehari .day{grid-template-columns:1fr 1fr!important;column-gap:26px!important;row-gap:15px!important;max-width:none!important}
 #sehari .day-item{padding-bottom:0!important}
-#sehari .day-item::before{display:none!important}
+#sehari .day-item::before{display:block!important;bottom:-17px!important}
+#sehari .day-item:nth-last-child(1)::before,#sehari .day-item:nth-last-child(2)::before{display:none!important}
 #harga .pfeats li{line-height:1.26!important}
 #harga .pfeats{gap:2px!important}
 #harga .sec-head{margin-bottom:12px!important}
