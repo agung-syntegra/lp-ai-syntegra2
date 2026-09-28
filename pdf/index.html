@@ -1099,8 +1099,8 @@ main > section .sec-head{margin-bottom:18px!important}
        Yang dirapatkan hanya gambar & spasi, BUKAN ukuran font teks. --- */
 #masalah .problem-banner{aspect-ratio:auto!important;height:150px!important;margin-bottom:18px!important}
 #mulai .final{padding-top:26px!important;padding-bottom:26px!important}
-#sehari2 .day-close{margin-top:18px!important}
-#sehari2 .day-close .sell{margin-top:12px!important;padding:15px 18px!important}
+#sehari .day-close{margin-top:18px!important}
+#sehari .day-close .sell{margin-top:12px!important;padding:15px 18px!important}
 .sec-white .cmp-note{margin-top:30px!important}
 .sec:has(.cmp) .sec-head{margin-bottom:36px!important}
 /* Persona: judul satu baris, kartu 2x2 */
@@ -1116,9 +1116,9 @@ main > section .sec-head{margin-bottom:18px!important}
 #harga .pcard-flag{top:-11px!important}
 /* dorongan tahap 2 */
 .fg-inner{gap:22px!important}
-#sehari2 .day-item{padding-bottom:11px!important}
-#sehari2 .day-close .big{font-size:22px!important}
-#sehari2 .day-close .brandline{margin-top:8px!important}
+#sehari .day-item{padding-bottom:11px!important}
+#sehari .day-close .big{font-size:22px!important}
+#sehari .day-close .brandline{margin-top:8px!important}
 .sec-white .cmp table td,.sec-white .cmp table th{padding-top:9px!important;padding-bottom:9px!important}
 #faq h2{font-size:56px!important}
 #faq .sec-head{margin-bottom:28px!important}
@@ -1129,7 +1129,10 @@ main > section .sec-head{margin-bottom:18px!important}
 #harga .pfeats{gap:3px!important}
 #harga .pcard{padding:16px 18px 12px!important}
 /* dorongan tahap 3 */
-#sehari2 .day-close .sell{display:none!important}
+#sehari .day-close .sell{display:none!important}
+#sehari .day{grid-template-columns:1fr 1fr!important;column-gap:26px!important;row-gap:14px!important;max-width:none!important}
+#sehari .day-item{padding-bottom:0!important}
+#sehari .day-item::before{display:none!important}
 #harga .pfeats li{line-height:1.26!important}
 #harga .pfeats{gap:2px!important}
 #harga .sec-head{margin-bottom:12px!important}
@@ -1497,16 +1500,6 @@ main > section .sec-head{margin-bottom:18px!important}
           <p class="day-out">Meeting summary + action items + mindmap.</p>
         </div>
       </li>
-    </ol>
-  </div>
-</section>
-
-<section class="sec sec-dark on-dark" id="sehari2">
-  <div class="container">
-    <div class="sec-head center">
-      <h2>Satu Hari, <span class="hl">Enam Pekerjaan Selesai.</span></h2>
-    </div>
-    <ol class="day">
       <li class="day-item reveal">
         <span class="day-time">13:30</span>
         <div class="day-card">
