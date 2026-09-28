@@ -1145,6 +1145,7 @@ main > section .sec-head{margin-bottom:18px!important}
 #dokumen h2{font-size:46px!important;line-height:1.14!important}
 #dokumen .fg-body{font-size:19px!important;line-height:1.5!important;margin-top:8px!important}
 #dokumen .feat-label{margin-bottom:6px!important}
+main .feat-label{font-size:12px!important}
 #dokumen .fg-inner{gap:8px!important}
 #dokumen .adl-row,#dokumen .adl-result{padding:5px 18px!important}
 #harga .pfeats li{line-height:1.26!important}
@@ -1846,7 +1847,7 @@ window.addEventListener('load',function(){
   // Font minimal 14px untuk semua teks slide yang terlihat (footer tetap 12px).
   (function(){
     document.querySelectorAll('main *').forEach(function(el){
-      if(el.closest('.slide-foot')||el.closest('.pcard-flag')) return;
+      if(el.closest('.slide-foot')||el.closest('.pcard-flag')||el.closest('.feat-label')) return;
       if(!el.checkVisibility||!el.checkVisibility({checkVisibilityCSS:true})) return;
       var hasText=Array.prototype.some.call(el.childNodes,function(n){return n.nodeType===3 && n.textContent.trim();});
       if(!hasText) return;
