@@ -1145,9 +1145,12 @@ main > section .sec-head{margin-bottom:18px!important}
 .hero{padding:0!important;align-items:stretch!important}
 .hero > .hero-inner{aspect-ratio:auto!important;padding:0!important;display:flex!important;flex-direction:column!important;position:relative!important}
 .hero .hero-media{position:relative!important;inset:auto!important;width:100%!important;height:auto!important;aspect-ratio:2/1!important;border-radius:0!important;flex:none!important;order:0!important}
-.hero .hero-copy{position:absolute!important;top:0!important;left:0!important;right:0!important;aspect-ratio:2/1!important;z-index:2!important;display:flex!important;flex-direction:column!important;justify-content:center!important;padding:clamp(24px,3.2vw,44px) 56px!important;margin:0!important}
-.hero .hero-copy h1{font-size:50px!important;line-height:1.08!important}
-.hero .hero-copy .hero-sub{font-size:16px!important;margin-top:14px!important}
+.hero .hero-copy{position:absolute!important;top:0!important;left:0!important;right:0!important;aspect-ratio:2/1!important;max-width:none!important;z-index:2!important;display:flex!important;flex-direction:column!important;justify-content:center!important;padding:clamp(24px,3.2vw,44px) 56px!important;margin:0!important}
+.hero .hero-copy h1{max-width:760px!important}
+.hero .hero-copy .hero-sub{max-width:640px!important}
+.hero .hero-copy .eyebrow{font-size:11px!important}
+.hero .hero-copy h1{font-size:60px!important;line-height:1.08!important}
+.hero .hero-copy .hero-sub{font-size:19px!important;margin-top:15px!important}
 .hero .hero-trust{list-style:none!important;order:1!important;flex:none!important;display:grid!important;grid-template-columns:repeat(4,1fr)!important;width:calc(100% - 108px)!important;margin:12px auto 14px!important;padding:0!important;border-radius:14px!important}
 .hero .hero-trust .trust-item{padding:8px 18px!important;gap:10px!important}
 .hero .hero-trust .trust-ic{width:32px!important;height:32px!important;border-radius:9px!important;color:var(--primary)!important}
@@ -1845,7 +1848,7 @@ window.addEventListener('load',function(){
   // Font minimal 14px untuk semua teks slide yang terlihat (footer tetap 12px).
   (function(){
     document.querySelectorAll('main *').forEach(function(el){
-      if(el.closest('.slide-foot')||el.closest('.pcard-flag')||el.closest('.feat-label')) return;
+      if(el.closest('.slide-foot')||el.closest('.pcard-flag')||el.closest('.feat-label')||el.closest('.eyebrow')) return;
       if(!el.checkVisibility||!el.checkVisibility({checkVisibilityCSS:true})) return;
       var hasText=Array.prototype.some.call(el.childNodes,function(n){return n.nodeType===3 && n.textContent.trim();});
       if(!hasText) return;
